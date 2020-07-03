@@ -7,11 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
-li, p {
+li,
+p {
   font-size: 0.8rem;
 }
 
@@ -95,11 +101,12 @@ p {
 
 .sidebar-wrapper .contact-list li {
   margin-bottom: 15px;
+  transform: translateZ(0);
+  transition-duration: 0.5s;
 }
 
 .sidebar-wrapper .contact-list li:hover {
-  transition-duration: 1s;
-  transform: scale(1.1);
+  transform: scale(0.9);
 }
 
 .sidebar-wrapper .contact-list .email i {
@@ -285,4 +292,36 @@ p {
   line-height: 1.6;
   color: #f5f5f5;
   font-size: .8rem;
+}
+
+
+/* Responsive desing Media Querises */
+
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    position: static;
+  }
+
+  .main-wrapper {
+    padding: 30px;
+  }
+
+  .main-wrapper .time {
+    position: static;
+    display: block;
+    margin: 5px 0;
+    font-size: 0.8rem;
+  }
+
+  .main-wrapper .upper-row {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .skillset .level-title {
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 0;
+  }
 }
